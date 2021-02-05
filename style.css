@@ -1,0 +1,60 @@
+th {
+  color: #fff;
+}
+
+caption {
+  padding-left: 10px;
+  position: relative;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #17a2b8;
+  color: #fff;
+  text-align: center;
+}
+
+text {
+  vertical-align: middle;
+}
+
+caption {
+  display: none;
+}
+
+.anime {
+  background-color: rgba(0, 0, 255, 0.1);
+  box-shadow: 10px 5px 5px rgba(0, 0, 255, 0.1);
+  transition-duration: 1ms;
+}
+
+.anime:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  box-shadow: 10px 5px 5px rgba(0, 0, 255, 0.1);
+  transition-duration: 50ms;
+}
+
+img {
+  margin: 1em;
+  width: 20em;
+  max-width: fit-content;
+}
+
+.row,
+.container {
+  text-align: center;
+  align-content: center;
+}
+
+#anime-stats {
+  margin: 0 0em;
+  margin-bottom: 1em;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+#anime-stats .col {
+  padding: 0;
+}
