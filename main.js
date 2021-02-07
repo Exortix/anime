@@ -60,7 +60,6 @@ $('#filter').change( () => {
                 url:`${url}/top/manga`,
                 success:function (response) {
                     myArray = response.top
-                    console.log(myArray)
                 },
                 complete:function () {
                     buildManga(myArray)
@@ -125,7 +124,6 @@ function search(query) {
                                 myArray = _(myArray) 
                                 .differenceBy(response.results, 'mal_id')
                                 .value();
-                                console.log(myArray)
                                 $.ajax({
                                     method:'GET',
                                     url:`${url}/search/manga?q=${query}&page=1&genre=33`,
