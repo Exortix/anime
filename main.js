@@ -29,7 +29,7 @@ $( document ).ready(function() {
                     myArray = response.top
                 },
                 complete:function () {
-                    buildAnime(myArray)
+                    builManga(myArray)
                 }
             }) 
             break;
@@ -60,9 +60,10 @@ $('#filter').change( () => {
                 url:`${url}/top/manga`,
                 success:function (response) {
                     myArray = response.top
+                    console.log(myArray)
                 },
                 complete:function () {
-                    buildAnime(myArray)
+                    buildManga(myArray)
                 }
             })
             break;
@@ -92,7 +93,7 @@ function search(query) {
                         myArray = response.top
                     },
                     complete:function () {
-                        buildAnime(myArray)
+                        buildManga(myArray)
                     }
                 })
                 break;
@@ -179,7 +180,7 @@ function buildAnime(data){
                                         ${data[i].score}
                                         </div>
                                     </div>
-                                    <p>${data[i].synopsis}</p>
+                                    <p>${(data[i].synopsis != null) ? data[i].synopsis : ''}</p>
                                     <a href=${data[i].url} target="_blank" class="btn btn-secondary">Details</a>
                                     <a href='https://www12.9anime.to/search?keyword=${data[i].title}' target="_blank" class="btn btn-primary">Watch</a>
                             </div>
@@ -210,7 +211,7 @@ function buildManga(data){
                                         ${data[i].score}
                                         </div>
                                     </div>
-                                    <p>${data[i].synopsis}</p>
+                                    <p>${(data[i].synopsis != null) ? data[i].synopsis : ''}</p>
                                     <a href=${data[i].url} target="_blank" class="btn btn-secondary">Details</a>
                                     <a href='https://mangakakalot.com/search/story/${data[i].title.replace(/[\W_]/g, " ").trim().split(' ').join('_')}' target="_blank" class="btn btn-primary">Read</a>
                                     
